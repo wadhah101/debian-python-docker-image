@@ -1,6 +1,5 @@
 FROM debian:buster
 
-
 COPY scripts /app/
 
 WORKDIR /app
@@ -19,7 +18,7 @@ RUN ./configure --enable-optimizations
 
 RUN make -j 4
 
-RUN sudo make altinstall
+RUN make altinstall
 
 RUN python3.9 --version
 
