@@ -1,7 +1,7 @@
-# /bin/sh
+#!/bin/sh
 
-python3 -m venv /home/env/wenv
+python -m venv /home/env/wenv
 
-source env/wenv/bin/activate
+chmod +x /home/env/wenv/bin/activate
 
-python hello.py
+/home/env/wenv/bin/activate

@@ -1,4 +1,4 @@
-# /bin/sh
+#!/bin/sh
 
 apt-get update -y
 
@@ -13,7 +13,10 @@ cd Python-3.9.1
 ./configure --enable-optimizations
 make -j 4
 
-sudo make altinstall
+make altinstall
 
 # check python version
 python3.9 --version
+
+cd .. 
+rm -rf Python-3.9.1 Python-3.9.1.tgz
